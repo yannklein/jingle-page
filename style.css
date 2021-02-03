@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+  background-color: black;
+}
+
+.background {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  opacity: 0;
+}
+
+.background.fade-in {
+  transition: 10s;
+  opacity: 1;
+}
+
+.background.fade-in-out {
+  animation: fade-in-out 3s linear;
+}
+
+@keyframes fade-in-out {
+  0%,100% { opacity: 0 }
+  20% { opacity: 0.2 }
+}
+
+.logo {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30%;
+  opacity: 0;
+}
+
+.logo.flash {
+  opacity: 1;
+  animation: flash 0.8s linear;
+  animation-iteration-count: 13;
+  width: 70%;
+  transition: width 10s;
+}
+
+@keyframes flash {
+  99.9% { opacity: 0 }
+  100% { opacity: 1 }
+}
+
+.play {
+  cursor: pointer;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  text-shadow: 0 0 16px rgb(0 0 0 / 80%);
+  font-size: 120px;
+}
+
+.oscar-player {
+  position: fixed;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  opacity: 0;
+}
