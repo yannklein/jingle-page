@@ -20,6 +20,9 @@
       }, 3000);
       audio.play();
       setTimeout(() => {
+        setInterval(() => audio.volume -= 0.1, 100);
+      }, 14000);
+      setTimeout(() => {
         audio.pause();
       }, 15000);
     });
