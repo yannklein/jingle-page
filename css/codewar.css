@@ -1,0 +1,105 @@
+.sprite {
+  width: 100px;
+  opacity: 0;
+}
+
+.ruby {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.lw-logo {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  top: 80%;
+}
+
+.left-arm, .right-arm {
+  position: fixed;
+  opacity: 0;
+  width: 500px;
+  top: 50%;
+}
+
+.left-arm {
+  left: 0;
+}
+
+.right-arm {
+  right: 0;
+}
+
+.sprite.fade-in {
+  width: 300px;
+  opacity: 1;
+  transition: .3s;
+}
+
+.left-arm.fall-left {
+  -webkit-animation: opendoorleft 0.75s ease;
+  opacity: 1;
+}
+
+.right-arm.fall-right {
+  -webkit-animation: opendoorright 0.75s ease;
+  opacity: 1;
+}
+
+@-webkit-keyframes opendoorleft {
+  from {
+     -webkit-transform: rotateY(-90deg);
+     -webkit-transform-origin: 0% 0%;
+     opacity: 1;
+  }
+  to {
+    -webkit-transform: rotateY(0deg);
+    -webkit-transform-origin: 0% 0%;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes opendoorright {
+  from {
+     -webkit-transform: rotateY(-90deg);
+     -webkit-transform-origin: 100% 100%;
+     opacity: 1;
+  }
+  to {
+    -webkit-transform: rotateY(0deg);
+    -webkit-transform-origin: 100% 100%;
+    opacity: 1;
+  }
+}
+
+.slogan {
+  font-family: sans-serif;
+  position: fixed;
+  top: 8%;
+  left: 50%;
+  width: 100%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  font-size: 88px;
+  color: white;
+  opacity: 0;
+}
+
+.slogan.fade-in {
+  transition: 10s;
+  opacity: 1;
+}
+
+.sns-video {
+  width: 100vw;
+  height: 100vh;
+  opacity: 1;
+}
+
+.sns-video.fade-out {
+  transition: 2s;
+  opacity: 0;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Dribbble challenge</title>
+</head>
+<body>
+  <h1 class="slogan">Time for... Code'n drink 🍻</h1>
+  <img src="images/le-wagon-white.png" alt="" class="sprite lw-logo">
+  <img src="images/left-arm.png" alt="" class="sprite left-arm">
+  <img src="images/right-arm.png" alt="" class="sprite right-arm ">
+  <img src="images/ruby.png" alt="" class="sprite ruby">
+  <iframe class="sns-video" width="560" height="315" src="https://www.youtube.com/embed/uxKmDWDUZ5A?controls=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+  <script type="text/javascript">
+    const audio = new Audio('https://archive.org/download/EyeOfTiger/Survivor-EyeOfTheTigermp3-codes1.com.mp3');
+    document.addEventListener("keyup", (event) => {
+      console.log(event);
+      if (event.key == "g") {
+        document.querySelector(".sns-video").classList.add("fade-out");
+        setTimeout(() => {
+          document.querySelector(".sns-video").remove();
+          audio.play();
+          setTimeout(() => {
+            document.querySelector(".ruby").classList.add("fade-in");
+          }, 9500);
+          setTimeout(() => {
+            document.querySelector(".lw-logo").classList.add("fade-in");
+          }, 10000);
+          setTimeout(() => {
+            document.querySelector(".left-arm").classList.add("fall-left");
+            document.querySelector(".right-arm").classList.add("fall-right");
+          }, 11000);
+          setTimeout(() => {
+            document.querySelector(".slogan").classList.add("fade-in");
+          }, 12000);
+          setTimeout(() => {
+            setInterval(() => audio.volume -= 0.1, 300);
+          }, 14000);
+          setTimeout(() => {
+            audio.pause();
+          }, 25000);
+        }, 1000);
+      }
+    });
+  </script>
+</body>
+</html>
