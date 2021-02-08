@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Pitch Night</title>
+</head>
+<body>
+  <video class="ted-video" src="ted.mp4"></video>
+  <p class="play" style="color: red;">▶</p>
+  <p class="pitch-title">Pitch night 🎙</p>
+  <script type="text/javascript">
+    document.querySelector(".play").addEventListener("click", (event) => {
+      event.currentTarget.style.display = 'none';
+      document.querySelector(".ted-video").play();
+      setTimeout(() => {
+        document.querySelector(".pitch-title").classList.add("fade-in");
+      }, 5000);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+.ted-video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.pitch-title {
+  position: fixed;
+  top: 48%;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 80px;
+  color: rgb(40,40,40);
+  opacity: 0;
+}
+
+.pitch-title.fade-in {
+  opacity: 1;
+  transition: 1s;
+}
