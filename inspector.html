@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Inspector challenge</title>
+</head>
+<body>
+  <video controls class="inspector-video" src="./inspector.mp4"></video>
+  <p class="inspector-title">The Detective challenge 🕵️‍♀️</p>
+  <p class="play" style="color: gray;">▶</p>
+  <script type="text/javascript">
+    document.querySelector(".play").addEventListener("click", (event) => {
+      event.currentTarget.style.display = 'none';
+      document.querySelector(".inspector-video").play();
+      setTimeout(() => {
+        document.querySelector(".inspector-video").classList.add("fade-out");
+        document.querySelector(".inspector-title").classList.add("fade-in");
+        setInterval(() => {
+          document.body.classList.toggle("background-red");
+        }, 1000);
+      }, 20 * 1000);
+    });
+  </script>
+</body>
+</html>

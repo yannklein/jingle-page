@@ -1,0 +1,39 @@
+.inspector-video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  opacity: 1;
+}
+
+.inspector-title {
+  position: fixed;
+  top: 30%;
+  transform: translate(0%, -100%);
+  font-family: sans-serif;
+  font-size: 80px;
+  font-weight: bolder;
+  color: white;
+  width: 100%;
+  text-align: center;
+  text-decoration: overline;
+  opacity: 0;
+}
+
+.fade-in {
+  font-size: 102px;
+  opacity: 1;
+  transition: 3s;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: 3s;
+}
+
+body {
+  transition: 1s;
+}
+
+.background-red {
+  background-color: rgba(160,0,0,1);
+}
