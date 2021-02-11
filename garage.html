@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Garage challenge</title>
+</head>
+<body>
+  <video controls class="garage-video" src="./garage.mp4"></video>
+  <p class="garage-title">The Garage challenge 😎</p>
+  <p class="play" style="color: blue;">▶</p>
+  <script type="text/javascript">
+    document.querySelector(".play").addEventListener("click", (event) => {
+      event.currentTarget.style.display = 'none';
+      document.querySelector(".garage-video").play();
+      setTimeout(() => {
+        document.querySelector(".garage-video").classList.add("fade-out");
+        document.querySelector(".garage-title").classList.add("fade-in");
+      }, 22 * 1000);
+      setTimeout(() => {
+        setInterval(() => document.querySelector(".garage-video").volume -= 0.1, 500);
+      }, 30000);
+    });
+  </script>
+</body>
+</html>
