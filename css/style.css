@@ -4,6 +4,11 @@
 @import url('inspector.css');
 @import url('garage.css');
 
+@font-face {
+  font-family:"LeanForeword";
+  src: url("./LeanForeword.ttf") format("truetype");
+}
+
 body {
   margin: 0;
   background-color: black;
