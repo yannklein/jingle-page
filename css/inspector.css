@@ -19,13 +19,13 @@
   opacity: 0;
 }
 
-.fade-in {
+.inspector-title.fade-in {
   font-size: 102px;
   opacity: 1;
   transition: 3s;
 }
 
-.fade-out {
+.inspector-title.fade-out {
   opacity: 0;
   transition: 3s;
 }

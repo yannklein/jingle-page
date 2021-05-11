@@ -7,15 +7,23 @@
   <title>Puzzle challenge</title>
 </head>
 <body>
+  <div class="tetris-overlay"></div>
+  <p class="play" style="color: skyblue;">▶</p>
   <video class="tetris-video" src="./tetris.mp4"></video>
   <p class="tetris-title">The JS game challenge</p>
-  <p class="play" style="color: skyblue;">▶</p>
   <script type="text/javascript">
+  const video = document.querySelector(".tetris-video");
     document.querySelector(".play").addEventListener("click", (event) => {
       event.currentTarget.style.display = 'none';
+      document.querySelector(".tetris-overlay").classList.add("fade-out");
       document.querySelector(".tetris-title").classList.add("fade-in");
-      document.querySelector(".tetris-video").classList.add("fade-in");
-      document.querySelector(".tetris-video").play();
+      video.classList.add("fade-in");
+      video.play();
+      setTimeout(() => {
+        setInterval(() => {
+          if (video.volume > 0) video.volume -= 0.01; 
+        }, 100);
+      }, 10000);
     });
   </script>
 </body>

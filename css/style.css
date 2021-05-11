@@ -60,6 +60,7 @@ body {
   transform: translate(-50%, -100%);
   text-shadow: 0 0 16px rgb(0 0 0 / 80%);
   font-size: 120px;
+  z-index: 99;
 }
 
 .oscar-player {

@@ -20,13 +20,13 @@
   opacity: 0;
 }
 
-.fade-in {
+.garage-title.fade-in {
   font-size: 102px;
   opacity: 1;
   transition: 3s;
 }
 
-.fade-out {
+.garage-title.fade-out {
   opacity: 0.1;
   transition: 5s;
 }
