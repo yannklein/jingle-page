@@ -26,7 +26,7 @@
   transition: 3s;
 }
 
-.garage-title.fade-out {
+.garage-video.fade-out {
   opacity: 0.1;
   transition: 5s;
 }
