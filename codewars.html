@@ -26,6 +26,8 @@
     playBtn.addEventListener("click", (event) => {
       playBtn.remove();
       video.style.opacity = 1;
+      const startTime = 40;
+      video.currentTime = startTime;
       video.play();
       // video.addEventListener('loadeddata', function() {
       //   console.log('play')
@@ -37,7 +39,7 @@
       // });
       setTimeout(() =>  {
         audio.play();
-      }, 86500);
+      }, 46500);
       setTimeout(() =>  {
         video.pause();
         video.remove();
