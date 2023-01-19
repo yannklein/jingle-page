@@ -3,6 +3,7 @@
 @import url('puzzle.css');
 @import url('inspector.css');
 @import url('garage.css');
+@import url('watchlist.css');
 
 body {
   margin: 0;
