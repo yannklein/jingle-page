@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
 .tetris-video {
   width: 100vw;
   height: 100vh;
@@ -6,34 +7,25 @@
 }
 
 .tetris-title {
+  letter-spacing: -0.1em;
+  /* font-family: 'VT323', monospace; */
+  font-family: 'Press Start 2P', cursive;
+  text-align: center;
   position: fixed;
-  width: 100%;
-  background-color: #F6F4F4;
-  top: 160px;
-  left: 47%;
-  text-align: left;
-  font-size: 50px;
-  font-family: monospace;
-  color: rgb(40,40,40);
-  opacity: 0;
-  line-height: 1.6em;
-  padding: 130px 0;
-}
-
-.tetris-overlay {
-  position: fixed;;
   width: 100vw;
   height: 100vh;
-  opacity: 1;
-  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8));
   z-index: 2;
+  color: white;
+  opacity: 0;
+  font-size: 72px;
+  margin: 0;
 }
 
-.tetris-overlay.fade-out {
-  opacity: 0;
-  transition: 3s; 
-}
 .tetris-title.fade-in, .tetris-video.fade-in {
   opacity: 1;
-  /* transition: 0.1s; */
+  transition: 1s;
 }

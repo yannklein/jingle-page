@@ -1,30 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
-  <title>Puzzle challenge</title>
-</head>
-<body>
-  <div class="tetris-overlay"></div>
-  <p class="play" style="color: skyblue;">▶</p>
-  <video class="tetris-video" src="https://res.cloudinary.com/yanninthesky/video/upload/v1620702171/cvgywa2aimnop8z41wuh.webm"></video>
-  <p class="tetris-title">The JS game challenge</p>
-  <script type="text/javascript">
-  const video = document.querySelector(".tetris-video");
-    document.querySelector(".play").addEventListener("click", (event) => {
-      event.currentTarget.style.display = 'none';
-      document.querySelector(".tetris-overlay").classList.add("fade-out");
-      document.querySelector(".tetris-title").classList.add("fade-in");
-      video.classList.add("fade-in");
-      video.play();
-      setTimeout(() => {
-        setInterval(() => {
-          if (video.volume > 0) video.volume -= 0.01; 
-        }, 100);
-      }, 5000);
-    });
-  </script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Puzzle challenge</title>
+  </head>
+  <body>
+    <p class="play" style="color: skyblue">▶</p>
+    <p class="tetris-title">The game challenge 👾</p>
+    <video class="tetris-video" src="tetris2.mp4"></video>
+    <script type="text/javascript">
+      const title = document.querySelector(".tetris-title");
+      const video = document.querySelector(".tetris-video");
+      document.querySelector(".play").addEventListener("click", (event) => {
+        event.currentTarget.style.display = "none";
+        video.classList.add("fade-in");
+        video.play();
+        setTimeout(() => {
+          setInterval(() => {
+            title.classList.add("fade-in");
+            if (video.volume > 0) video.volume -= 0.02;
+          }, 100);
+        }, 10000);
+      });
+    </script>
+  </body>
 </html>
