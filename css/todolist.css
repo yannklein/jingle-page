@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
+
+.ted-video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.todolist-overlay {
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.todolist-title {
+  margin: 0;
+  position: fixed;
+  top: 0%;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'Comic Neue', cursive;
+  font-size: 100px;
+  color: rgb(455, 213, 0);
+  background-image: linear-gradient(rgba(0,0,255,0.6), rgba(0,0,55,0.6));
+  text-shadow: 3px 0 #558019, -3px 0 #558019, 0 3px #558019, 0 -3px #558019,
+               3px 3px #558019, -3px -3px #558019, 3px -3px #558019, -3px 3px #558019;
+  opacity: 0;
+  font-weight: bold;
+}
+
+.todolist-title.fade-in {
+  opacity: 1;
+  transition: 1s;
+}
+
+.todolist-title.move-up {
+  top: 30%;
+  transition: 1s;
+}

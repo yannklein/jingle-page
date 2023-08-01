@@ -6,6 +6,7 @@
 @import url('inspector.css');
 @import url('garage.css');
 @import url('watchlist.css');
+@import url('todolist.css');
 
 body {
   margin: 0;
