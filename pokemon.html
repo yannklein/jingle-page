@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>The Pokemon challenge</title>
+</head>
+<body>
+  <video class="pokemon-video" src="pokemon.mp4"></video>
+  <p class="play" style="color: rgb(255, 242, 0);">▶</p>
+  <div class="pokemon-overlay"></div>
+  <p class="pokemon-title">The Pokemon challenge 💛</p>
+  <script type="text/javascript">
+    const title = document.querySelector(".pokemon-title");
+    const overlay = document.querySelector(".pokemon-overlay");
+    const video = document.querySelector(".pokemon-video");
+    document.querySelector(".play").addEventListener("click", (event) => {
+      event.currentTarget.style.display = 'none';
+      overlay.style.display = 'none';
+      video.play();
+      setTimeout(() => {
+        title.classList.add("fade-in");
+      }, 27000);
+      setTimeout(() => {
+        setInterval(() => video.volume -= 0.1, 300);
+      }, 30000);
+    });
+  </script>
+</body>
+</html>🎥

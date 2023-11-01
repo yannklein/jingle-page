@@ -7,6 +7,7 @@
 @import url('garage.css');
 @import url('watchlist.css');
 @import url('todolist.css');
+@import url('pokemon.css');
 
 body {
   margin: 0;
