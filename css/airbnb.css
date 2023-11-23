@@ -1,0 +1,30 @@
+.ted-video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.airbnb-title {
+  position: fixed;
+  top: 45%;
+  left: 0;
+  width: 100%;
+  height: 600px;
+  text-align: center;
+  font-family: 'Crimson Pro', serif;
+  font-size: 100px;
+  color: pink;
+  text-shadow: 0 0 16px rgb(0,0,0,0.7);
+  opacity: 0;
+  font-weight: bold;
+}
+
+.airbnb-title.fade-in {
+  opacity: 1;
+  transition: 1s;
+}
+
+.airbnb-title.move-up {
+  top: 30%;
+  transition: 1s;
+}

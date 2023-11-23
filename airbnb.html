@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Watch List</title>
+</head>
+<body>
+  <video class="ted-video" src="airbnb.mp4"></video>
+  <p class="play" style="color: rgb(95, 43, 6);">▶</p>
+  <p class="airbnb-title">Airbnb Challenge 🧸</p>
+  <script type="text/javascript">
+    document.querySelector(".play").addEventListener("click", (event) => {
+      event.currentTarget.style.display = 'none';
+      document.querySelector(".ted-video").play();
+      setTimeout(() => {
+        document.querySelector(".airbnb-title").classList.add("fade-in");
+      }, 15000);
+    });
+  </script>
+</body>
+</html>🎥
